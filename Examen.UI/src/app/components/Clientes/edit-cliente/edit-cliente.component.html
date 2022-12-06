@@ -1,0 +1,34 @@
+<div class="container my-5">
+    <h1 class="mb-3">Editar Cliente</h1>
+
+    <div class="row">
+        <div class="col-5">
+        <form #form="ngForm" (ngSubmit)='updateCliente()' >
+            <div class="mb-3">
+                <label for="id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="id" readonly
+                name="id" [(ngModel)]="detallescliente.id">
+            </div>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre"
+                name="nombre" [(ngModel)]="detallescliente.nombre">
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido"
+                name="apellido" [(ngModel)]="detallescliente.apellido">
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input type="text" class="form-control" id="direccion"
+                name="direccion" [(ngModel)]="detallescliente.direccion">
+            </div>
+
+            <button type="submit" class="btn btn-primary" mr-5>Guardar</button>
+            <button type="button" class="btn btn-primary" ml-5 
+                    (click)="deleteCliente(detallescliente.id)" >Eliminar</button>
+        </form>
+        </div>
+    </div>
+</div>

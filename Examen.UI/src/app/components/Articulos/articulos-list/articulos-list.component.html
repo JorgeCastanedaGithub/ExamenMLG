@@ -1,0 +1,28 @@
+<div class="container my-4">
+    <h1 class="mb-3">Articulos</h1>
+<table class="table table-striped-columns" *ngIf='articulos && articulos.length > 0'>
+    <thead>
+      <tr>
+        <th scope="Id">ID</th>
+        <th scope="Codigo">Codigo</th>
+        <th scope="Descripcion">Descripcion</th>
+        <th scope="Precio">Precio</th>
+        <th scope="Stock">Stock</th>
+        <th scope="Fecha">Fecha</th>
+        <th>Edicion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let art of articulos'>
+        <th>{{ art.id }} </th>
+        <td>{{ art.codigo }} </td>
+        <td>{{ art.descripcion }}</td>
+        <td>{{ art.precio }} </td>
+        <td>{{ art.stock }}</td>
+        <td>{{ art.fecha }} </td>
+        <td><a [routerLink]="['/articulos', 'edit', art.id]">Editar</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf='!articulos || articulos.length <= 0 '>No existen articulos</p>
+</div>

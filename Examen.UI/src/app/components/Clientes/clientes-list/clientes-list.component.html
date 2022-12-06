@@ -1,0 +1,24 @@
+<div class="container my-S">
+    <h1 class="mb-3">Clientes</h1>
+<table class="table table-striped-columns" *ngIf='Clientes && Clientes.length > 0'>
+    <thead>
+      <tr>
+        <th scope="Id">ID</th>
+        <th scope="Nombre">Nombre</th>
+        <th scope="Apellido">Apellido</th>
+        <th scope="Direccion">Direccion</th>
+        <th>Edicion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let cliente of Clientes'>
+        <th>{{ cliente.id }} </th>
+        <td>{{ cliente.nombre }} </td>
+        <td>{{ cliente.apellido }}</td>
+        <td>{{ cliente.direccion }} </td>
+        <td><a [routerLink]="['/clientes', 'edit', cliente.id]">Editar</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf='!Clientes || Clientes.length <= 0 '>No existen clientes</p>
+</div>

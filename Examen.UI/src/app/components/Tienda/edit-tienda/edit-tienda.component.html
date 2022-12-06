@@ -1,0 +1,28 @@
+<div class="container my-5">
+    <h1 class="mb-3">Editar Tienda</h1>
+
+    <div class="row">
+        <div class="col-5">
+        <form #form="ngForm" (ngSubmit)='updateTienda()' >
+            <div class="mb-3">
+                <label for="id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="id" readonly
+                name="id" [(ngModel)]="detallesTienda.id">
+            </div>
+            <div class="mb-3">
+                <label for="sucursal" class="form-label">Sucursal</label>
+                <input type="text" class="form-control" id="sucursal"
+                name="sucursal" [(ngModel)]="detallesTienda.sucursal">
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input type="text" class="form-control" id="direccion"
+                name="direccion" [(ngModel)]="detallesTienda.direccion">
+            </div>
+            <button type="submit" class="btn btn-primary" mr-5>Guardar</button>
+            <button type="button" class="btn btn-primary" ml-5 
+                    (click)="deleteTienda(detallesTienda.id)" >Eliminar</button>
+        </form>
+        </div>
+    </div>
+</div>

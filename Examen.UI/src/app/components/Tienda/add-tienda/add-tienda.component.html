@@ -1,0 +1,21 @@
+<div class="container my-5">
+    <h1 class="mb-3">Agregar Nueva Tienda</h1>
+
+    <div class="row">
+        <div class="col-5">
+        <form #form="ngForm" (ngSubmit)="agregarNuevaTienda()" >
+            <div class="mb-3">
+                <label for="sucursal" class="form-label">Sucursal</label>
+                <input type="text" class="form-control" id="sucursal"
+                name="sucursal" [(ngModel)]="nuevaTienda.sucursal">
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Direccion</label>
+                <input type="text" class="form-control" id="direccion"
+                name="direccion" [(ngModel)]="nuevaTienda.direccion">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </form>
+        </div>
+    </div>
+</div>

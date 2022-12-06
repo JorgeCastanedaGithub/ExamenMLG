@@ -1,0 +1,22 @@
+<div class="container my-S">
+    <h1 class="mb-3">Clientes</h1>
+<table class="table table-striped-columns" *ngIf='tienda && tienda.length > 0'>
+    <thead>
+      <tr>
+        <th scope="Id">ID</th>
+        <th scope="Sucursal">Sucursal</th>
+        <th scope="Direccion">Direccion</th>
+        <th>Edicion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let tien of tienda'>
+        <th>{{ tien.id }} </th>
+        <td>{{ tien.sucursal }} </td>
+        <td>{{ tien.direccion }}</td>
+        <td><a [routerLink]="['/tienda', 'edit', tien.id]">Editar</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf='!tienda || tienda.length <= 0 '>No existen tiendas</p>
+</div>

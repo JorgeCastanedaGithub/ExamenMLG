@@ -1,0 +1,57 @@
+<div class="container my-5">
+    <h1 class="mb-3">Agregar Nuevo Articulo</h1>
+
+    <div class="row">
+        <div class="col-5">
+        <form #form="ngForm" (ngSubmit)="agregarNuevoArticulo()" >
+            <div class="mb-3">
+                <label for="codigo" class="form-label">Codigo</label>
+                <input type="text" class="form-control" id="codigo"
+                name="codigo" [(ngModel)]="nuevoArticulo.codigo">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" id="descripcion"
+                name="descripcion" [(ngModel)]="nuevoArticulo.descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="text" class="form-control" id="precio"
+                name="precio" [(ngModel)]="nuevoArticulo.precio">
+            </div>
+            <!--div class="mb-3">
+                <label for="imagen" class="form-label">Imagen</label>
+                <input type="text" class="form-control" id="imagen"
+                name="imagen" [(ngModel)]="nuevoArticulo.imagen">
+            </div-->
+            <div class="mb-3">
+                <label for="stock" class="form-label">Stock</label>
+                <input type="text" class="form-control" id="stock"
+                name="stock" [(ngModel)]="nuevoArticulo.stock">
+            </div>
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="text" class="form-control" id="fecha"
+                name="fecha" [(ngModel)]="nuevoArticulo.fecha">
+            </div>
+            <div class="mb-3">
+                <label for="tienda" class="form-label">Tienda</label>
+                <p>
+                    <select name="select1" [(ngModel)]=selected class="form-select" >
+                        <option *ngFor="let tienda of tiendas" > {{tienda.sucursal}} </option>
+                    </select>
+                </p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Imagen</label>
+                <p></p>
+                <input type="file" name="input1" id="input1" placeholder="Seleccione una imagen" >
+            </div>
+            <p></p>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+            <p></p>
+            <img src="" height="200" />
+        </form>
+        </div>
+    </div>
+</div>
