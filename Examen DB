@@ -1,0 +1,74 @@
+USE [ExamenDB]
+GO
+
+/****** Object:  Table [dbo].[Tienda]    Script Date: 22/12/06 14:25:00 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Tienda](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Sucursal] [nvarchar](50) NULL,
+	[Direccion] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Tienda] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+USE [ExamenDB]
+GO
+
+/****** Object:  Table [dbo].[Clientes]    Script Date: 22/12/06 14:24:56 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Clientes](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Nombre] [nvarchar](50) NULL,
+	[Apellido] [nvarchar](50) NULL,
+	[Direccion] [nvarchar](50) NULL,
+	[Id_Articulo] [uniqueidentifier] NULL,
+ CONSTRAINT [PK_Clientes] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+USE [ExamenDB]
+GO
+
+/****** Object:  Table [dbo].[Articulos]    Script Date: 22/12/06 14:24:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Articulos](
+	[Id] [uniqueidentifier] NOT NULL,
+	[Codigo] [nvarchar](50) NULL,
+	[Descripcion] [nvarchar](50) NULL,
+	[Precio] [numeric](18, 0) NULL,
+	[Imagen] [varbinary](max) NULL,
+	[Stock] [int] NULL,
+	[Fecha] [datetime] NULL,
+	[Id_Tienda] [uniqueidentifier] NULL,
+ CONSTRAINT [PK_Articulos] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
