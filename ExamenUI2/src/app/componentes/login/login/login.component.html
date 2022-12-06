@@ -1,0 +1,16 @@
+<div class="login">
+<form class="custom-form" method="post" >
+    <input type="password" [(ngModel)]="nombre" name="nombre" placeholder="Nombre" required="required">
+    <input type="password" [(ngModel)]="apellido"  name="apellido" placeholder="Apellido" required="required">
+    <button type="submit" (click)="login()">Log in</button>
+    <p></p>
+    <div *ngIf="showMessage" class="alert alert-danger alert-dismissible fade show" role="alert">
+	<div class="position-absolute top-0 start-0">
+      		<strong> Credenciales Invalidas</strong> Accesso invalido
+	</div>
+      	<div class="position-absolute top-0 end-0">
+      		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+	</div>
+    </div>
+  </form>
+</div>

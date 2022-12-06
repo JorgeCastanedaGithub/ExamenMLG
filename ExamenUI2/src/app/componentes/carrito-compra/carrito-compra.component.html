@@ -1,0 +1,50 @@
+<div class="container my-5">
+    <h1 class="mb-3">Comprar  Articulo</h1>
+
+    <div class="row">
+        <div class="col-5">
+        <form #form="ngForm" (ngSubmit)='comprarArticulo()' >
+            <div class="mb-3">
+                <label for="id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="id" readonly
+                name="id" [(ngModel)]="detalleArticulo.id">
+            </div>
+            <div class="mb-3">
+                <label for="codigo" class="form-label">Codigo</label>
+                <input type="text" class="form-control" id="codigo" readonly
+                name="codigo" [(ngModel)]="detalleArticulo.codigo">
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripcion</label>
+                <input type="text" class="form-control" id="descripcion"
+                name="descripcion" [(ngModel)]="detalleArticulo.descripcion">
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="text" class="form-control" id="precio" readonly
+                name="precio" [(ngModel)]="detalleArticulo.precio">
+            </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Stock</label>
+                <input type="text" class="form-control" id="stock" readonly
+                name="stock" [(ngModel)]="detalleArticulo.stock">
+            </div>
+            <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="text" class="form-control" id="fecha" readonly
+                name="fecha" [(ngModel)]="detalleArticulo.fecha">
+            </div>
+
+            <div class="mb-3">
+                <label for="Id_Tienda" class="form-label">Id_Tienda</label>
+                <input type="text" class="form-control" id="Id_Tienda" readonly
+                name="Id_Tienda" [(ngModel)]="detalleArticulo.id_tienda">
+            </div>
+
+            <button type="submit" class="btn btn-primary" mr-5>Comprar</button>
+            <button type="button" class="btn btn-primary" ml-5 
+                    (click)="cancelarCompra()">Cancelar</button>
+        </form>
+        </div>
+    </div>
+</div>
