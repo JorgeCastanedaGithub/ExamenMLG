@@ -1,5 +1,4 @@
 # ExamenMLG
-Examen Posición Desarrollador .Net
 1.- Crear una base de datos con 3 tablas con sus relaciones correspondientes, realiza los ajustes necesarios.
 Clientes:
 ⦁	Nombre
